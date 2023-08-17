@@ -11,17 +11,17 @@ const drawList = (data, listType) => {
   data[listType].forEach((card) => {
     list.innerHTML += `
       <li class='card' id=${card.id}>
-        <span>Title:</span>
+        <span class='cardTitle'>Title:</span>
         <p class='title'>${card.title}</p>
-        <span>Description:</span>
+        <span class='cardDescription'>Description:</span>
         <p class='description'>${card.description}</p>
         <br />
         ${
           listType !== 'deleted'
-            ? `<button class='button btnEdit'>Edit</button>
-              <button class='button btnNext'>Next</button>
-              <button class='button btnDelete'>Delete</button>`
-            : `<button class='button btnRestore'>Restore</button>`
+            ? `<button class='button btnEdit'>EDIT</button>
+              <button class='button btnNext'>NEXT</button>
+              <button class='button btnDelete'>DELETE</button>`
+            : `<button class='button btnRestore'>RESTORE</button>`
         }
       </li>
     `
